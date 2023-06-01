@@ -1,0 +1,24 @@
+{% extends 'learning_logs/base.html' %}
+{% load bootstrap3 %}
+
+{% block header %}
+    <div style="font-weight: bold;">
+        <h3>登录您的账户</h3>
+    </div>
+{% endblock header %}
+
+{% block content %}
+    <body>
+    <form action="{% url 'users:login' %}" method="post" class="form">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        <div class="form-group">
+            <button name="submit" class="btn btn-primary">登录</button>
+            <span>&nbsp;</span>
+            <span>  没有账号？<a href="{% url 'users:register' %}">立即注册</a></span>
+            <span><a href="{% url 'users:password_reset' %}">忘记密码？</a></span>
+        </div>
+        <input type="hidden" name="next" value="{% url 'learning_logs:home' %}">
+    </form>
+    </body>
+{% endblock content %}
