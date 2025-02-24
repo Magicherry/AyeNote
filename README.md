@@ -1,4 +1,4 @@
-# Python数据分析设计项目
+# Python Data Analysis Design Project  
 
-#### 项目介绍
-设计标题：基于Django的AyeNote云笔记平台分析与设计
+#### Project Introduction  
+**Design Title:** Analysis and Design of AyeNote Cloud Notebook Platform Based on Django
