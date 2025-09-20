@@ -1,0 +1,26 @@
+{% extends 'notes/base.html' %}
+{% load bootstrap3 %}
+{% block header %}
+    <h2>标题:</h2>
+{% endblock header %}
+{% block content %}
+    <ul>
+        {% for topic in topics %}
+            <li>
+                <div class="alert alert-default" role="alert" style="background-color: #f5f5f5">
+                    <strong style="font-size:medium"><a href="{% url 'notes:topic' topic.id %}">{{ topic }}</a></strong><br>
+                    <span>创建时间:&nbsp;&nbsp;{{ topic.date_added|date:'M d，Y H:i' }}</span>
+                    &nbsp;&nbsp;<a href="{% url 'notes:edit_topic' topic.id %}" class="btn btn-default btn-xs">修改标题</a>&nbsp;&nbsp;<a
+                        href="{% url 'notes:delete_topic' topic.id %}"
+                        class="btn btn-danger btn-xs">删除标题</a>
+                </div>
+            </li>
+        {% empty %}
+            <li style="font-size: 20px;">
+                抱歉，这个标题列表下还没有笔记。
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'notes:new_topic' %}" class="btn btn-primary">添加标题</a>
+
+{% endblock content %}
