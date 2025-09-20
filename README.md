@@ -1,6 +1,20 @@
-# AyeNote - Cloud Notebook Platform
+<h2 align="center">
+  AyeNote - Cloud Notebook Platform <br/>
+</h2>
 
-A Django-based cloud notebook platform for managing personal learning notes and book searches with data visualization features.
+
+<p align="center">
+  A Django-based cloud notebook platform for managing personal learning notes and book searches with data visualization features.
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Django-4.2.1-green?logo=django" alt="Django Version">
+  <img src="https://img.shields.io/badge/Python-3.8+-blue?logo=python" alt="Python">
+  <img src="https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql" alt="MySQL">
+  <img src="https://img.shields.io/badge/Bootstrap-3-purple?logo=bootstrap" alt="Bootstrap">
+  <img src="https://img.shields.io/badge/Selenium-WebDriver-yellow?logo=selenium" alt="Selenium">
+  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
+</p>
 
 ## Features
 
