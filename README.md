@@ -200,32 +200,68 @@ Uses Selenium WebDriver for dynamic content scraping:
 - User comments and interactions
 - Real-time book availability and pricing
 
-## Data Models
+## Database Schema
 
-### User Model
-Extended Django user model with additional fields:
-- Nickname support
-- Unique email constraints
-- User status management
+### Entity Relationship Diagram
 
-### Topic Model
-Organizes learning materials:
-- User-owned topics
-- Hierarchical organization
-- Creation timestamps
+```mermaid
+erDiagram
+    User {
+        int id PK
+        string username UK
+        string email UK
+        string password
+        string first_name
+        string last_name
+        string nickname
+        datetime date_joined
+        boolean is_active
+        boolean is_staff
+        boolean is_superuser
+    }
+    
+    Topic {
+        int id PK
+        string text
+        datetime date_added
+        int owner_id FK
+    }
+    
+    Entry {
+        int id PK
+        text text
+        datetime date_added
+        int topic_id FK
+    }
+    
+    History {
+        int id PK
+        string search_term
+        int search_count
+        datetime last_searched
+        int user_id FK
+    }
+    
+    User ||--o{ Topic : "owns"
+    Topic ||--o{ Entry : "contains"
+    User ||--o{ History : "tracks"
+```
 
-### Entry Model
-Individual notes and entries:
-- Rich text content
-- Topic associations
-- User ownership
-- Search capabilities
+### Data Model Details
 
-### History Model
-Tracks user search behavior:
-- Search terms and frequency
-- User-specific history
-- Analytics data source
+| Model | Description | Key Fields |
+|-------|-------------|------------|
+| **User** | Extended Django user model | `username`, `email`, `nickname`, `is_active` |
+| **Topic** | Learning material categories | `text`, `date_added`, `owner` |
+| **Entry** | Individual notes and content | `text`, `date_added`, `topic` |
+| **History** | Search behavior tracking | `search_term`, `search_count`, `user` |
+
+### Database Features
+
+- **User Isolation**: Each user can only access their own topics, entries, and search history
+- **Hierarchical Organization**: Topics organize entries in a structured manner
+- **Search Analytics**: History model tracks user behavior for data visualization
+- **Referential Integrity**: Foreign key relationships ensure data consistency
 
 ## Contributing
 
