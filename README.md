@@ -8,7 +8,6 @@
   <img src="https://img.shields.io/badge/MySQL-8.0-orange?logo=mysql" alt="MySQL">
   <img src="https://img.shields.io/badge/Bootstrap-3-purple?logo=bootstrap" alt="Bootstrap">
   <img src="https://img.shields.io/badge/Selenium-WebDriver-yellow?logo=selenium" alt="Selenium">
-  <img src="https://img.shields.io/badge/Status-Active-brightgreen" alt="Status">
 </p>
 
 <p align="center">
