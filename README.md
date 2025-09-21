@@ -17,9 +17,9 @@
 ## Features
 
 ### Core Functionality
-- **Topic & Note Management**: Create, edit, delete, and organize learning topics with detailed notes
-- **Advanced Search**: Search notes by content and topic with filtering capabilities
-- **User Authentication**: Registration, login, password reset, and profile management
+- Create, edit, delete, and organize learning topics with detailed notes
+- Search notes by content and topic with filtering capabilities
+- Registration, login, password reset, and profile management
 
 ### Book Search & Analytics
 - **Douban Integration**: Search books with detailed information, ratings, and reviews
@@ -28,29 +28,36 @@
 - **Recommendations**: Book suggestions based on search history and preferences
 
 ### Technical Features
-- **Responsive Design**: Bootstrap-based UI optimized for all devices
-- **Admin Interface**: Enhanced Django admin panel with SimpleUI
-- **Web Scraping**: Real-time book data collection using Selenium and BeautifulSoup
+- Bootstrap-based UI optimized for all devices
+- Enhanced Django admin panel with SimpleUI
+- Real-time book data collection using Selenium and BeautifulSoup
 
 ## Technology Stack
 
 ### Backend
-- **Framework**: Django 4.2.1
-- **Database**: MySQL
-- **Authentication**: Django's built-in auth system with custom user model
-- **Web Scraping**: Selenium WebDriver + BeautifulSoup
-- **Data Visualization**: Pygal
+| Category         | Technology                                                                 |
+|------------------|-----------------------------------------------------------------------------|
+| Framework        | Django 4.2.1                                                               |
+| Database         | MySQL                                                                      |
+| Authentication   | built-in auth system with custom user model                       |
+| Web Scraping     | Selenium WebDriver + BeautifulSoup                                         |
+| Data Visualization | Pygal                                                                    |
 
 ### Frontend
-- **UI Framework**: Bootstrap 3
-- **Styling**: Custom CSS with responsive design
-- **Charts**: SVG-based interactive visualizations
-- **Templates**: Django template system
+| Category   | Technology                                  |
+|------------|----------------------------------------------|
+| UI Framework | Bootstrap 3                               |
+| Styling    | Custom CSS with responsive design           |
+| Charts     | SVG-based interactive visualizations        |
+| Templates  | Django template system                      |
 
 ### Deployment
-- **WSGI Server**: uWSGI
-- **Static Files**: Django static files handling
-- **Database**: MySQL with custom configurations
+| Category     | Technology                         |
+|--------------|-------------------------------------|
+| WSGI Server  | uWSGI                              |
+| Static Files | Django static files handling        |
+| Database     | MySQL with custom configurations    |
+
 
 ## Installation
 
@@ -128,16 +135,16 @@
 ## Usage
 
 ### Getting Started
-1. **Register an Account**: Create a new user account or use the admin panel
-2. **Create Topics**: Start by creating topics for your learning areas
-3. **Add Notes**: Add detailed notes under each topic with rich text content
-4. **Search Books**: Use the book search feature to find and analyze books
-5. **View Analytics**: Check your behavior analysis to see reading patterns
+1. Create a new user account or use the admin panel
+2. Start by creating topics for your learning areas
+3. Add detailed notes under each topic with rich text content
+4. Use the book search feature to find and analyze books
+5. Check your behavior analysis to see reading patterns
 
-### Key Features
-- **Note Management**: Organize learning materials, search through content, edit or delete as needed
-- **Book Search**: Access Douban book database, view ratings and reviews, track search history
-- **Data Analytics**: Visualize search patterns, view rating distributions, get personalized recommendations
+### Highlights
+- Organize learning materials, search through content, edit or delete as needed
+- Access Douban book database, view ratings and reviews, track search history
+- Visualize search patterns, view rating distributions, get personalized recommendations
 
 ## Project Structure
 
@@ -262,21 +269,6 @@ erDiagram
 - **Search Analytics**: History model tracks user behavior for data visualization
 - **Referential Integrity**: Foreign key relationships ensure data consistency
 
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/new-feature`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/new-feature`)
-5. Create a Pull Request
-
-### Development Guidelines
-- Follow Django best practices
-- Write comprehensive tests
-- Update documentation for new features
-- Ensure code is compatible with Python 3.8+
-- Follow PEP 8 style guidelines
-
 ## Security Considerations
 
 - **CSRF Protection**: Enabled by default
@@ -296,20 +288,12 @@ erDiagram
 
 This project is licensed under the Mozilla Public License 2.0 - see the [LICENSE](LICENSE) file for details.
 
-## Support
-
-For support and questions:
-- Create an issue on GitHub
-- Check the documentation
-- Review existing issues and discussions
-
 ## Acknowledgments
 
-- Django framework for the robust web development platform
-- Bootstrap for responsive UI components
-- Pygal for data visualization capabilities
-- Douban for book information API
-- All contributors who have helped improve this project
+- [Django](https://www.djangoproject.com/) for the robust web development platform  
+- [Bootstrap](https://getbootstrap.com/) for responsive UI components  
+- [Pygal](http://www.pygal.org/en/stable/) for data visualization capabilities  
+- [Douban](https://www.douban.com/) for book information API  
 
 ---
 
